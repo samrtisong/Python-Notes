@@ -23,5 +23,17 @@ print b        # [1, 2, 3, 4, 5]
 input.sort()
 print input    # [1, 2, 3, 4, 5]
 
-
+# (2) 连续子数组的最大和---剑指offer
+array=[-1,-2,-3,-4,-5]
+maxnum = array[0]
+curnum = array[0]
+        
+for i in array[1:]:
+    if curnum <=0:
+        curnum = i
+    else:
+        curnum += i
+    if curnum > maxnum:
+        maxnum = curnum
+print maxnum
 
