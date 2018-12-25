@@ -55,16 +55,19 @@ for i in range(0,len(ss),2):
 	if a==n:
 		sss.append(ss[i])
 		sss.append(ss[i+1])
-print sss	
-minin=sss[0]*sss[1]
-for i in range(0,len(sss),2):
-	b=sss[i]*sss[i+1]
-	print b
-	if b<=minin:
+print sss
+if len(sss)==0:
+	print sss
+else:
+	minin=sss[0]*sss[1]
+	for i in range(0,len(sss),2):
+		b=sss[i]*sss[i+1]
+		print b
+		if b<=minin:
 		minin=b
 		s4=sss[i]
 		s5=sss[i+1]
-s6.append(s4)
-s6.append(s5)				
-print s6
+	s6.append(s4)
+	s6.append(s5)				
+	print s6
 
