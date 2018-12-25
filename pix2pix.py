@@ -37,3 +37,34 @@ for i in array[1:]:
         maxnum = curnum
 print maxnum
 
+# (3) 数组之和为S的两个数--剑指offer
+n=6
+num=[]
+minin=12
+s=[1,2,3,4,5]
+ss=[]
+sss=[]
+s6=[]
+for i in range(len(s)):
+	for j in range(i+1,len(s)):
+		ss.append(s[i])
+		ss.append(s[j])
+print ss
+for i in range(0,len(ss),2):
+	a = ss[i]+ss[i+1]
+	if a==n:
+		sss.append(ss[i])
+		sss.append(ss[i+1])
+print sss	
+minin=sss[0]*sss[1]
+for i in range(0,len(sss),2):
+	b=sss[i]*sss[i+1]
+	print b
+	if b<=minin:
+		minin=b
+		s4=sss[i]
+		s5=sss[i+1]
+s6.append(s4)
+s6.append(s5)				
+print s6
+
