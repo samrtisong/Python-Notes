@@ -8,7 +8,17 @@ for i in range(0,len(tinput)):
 		output.append(tinput[i:j])
 print output                          # ['a', 'ab', 'abc', 'b', 'bc', 'c']
 
-# (2) 
+# (2) 字符串的切割和拼接 ---剑指 翻转单词顺序列
+
+s = "wei liu song"
+b=s.split(' ')
+a=s.split(' ')
+print b            # ['wei', 'liu', 'song']
+print ' '.join(b[::-1])  # song liu wei
+
+for i in range(len(b)):
+	a[2-i]=b[i]
+print ' '.join(a)        # song liu wei
 
 
 
