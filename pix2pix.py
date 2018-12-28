@@ -20,6 +20,13 @@ for i in range(len(b)):
 	a[2-i]=b[i]
 print ' '.join(a)        # song liu wei
 
+# (3) 字符串异常处理
+try:                      # 判断字符串s是否是数值型字符串 ---剑指
+	float(s)          # 检测是否有异常
+	return True
+except:
+	return False      # 上述异常发生时执行
+
 
 
 
