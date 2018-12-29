@@ -88,3 +88,36 @@ else:
 	s6.append(s5)				
 	print s6
 
+# (4)数组倒序输出的几种方法
+a=[1,2,3,4,5]
+b=[]
+for i in a:
+	b.insert(0,i)   # method-1 使用函数insert(index, element)
+	print b
+print b
+
+print a[::-1]       # method-2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
