@@ -98,7 +98,29 @@ print b
 
 print a[::-1]       # method-2
 
+# (5) 二维数组的翻转
 
+def turn(matrix):
+    num_r = len(matrix)
+    num_c = len(matrix[0])
+    newmat = []
+    for i in range(num_c):
+        newmat2 = []
+        for j in range(num_r):
+            newmat2.append(matrix[j][i])
+        newmat.append(newmat2)
+    # 注释掉是 矩阵顺时针旋转 
+	newmat.reverse()                         
+    return newmat
+
+a = [[3,4],[1,2],[5,6]]
+b = turn(a)
+print(b)
+
+#   input          output        ## 矩阵的逆时针旋转
+#   [3,4]          [4,2,6]
+#   [1,2]          [3,1,5]
+#   [5,6]
 
 
 
