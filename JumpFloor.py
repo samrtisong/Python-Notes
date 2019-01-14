@@ -11,7 +11,7 @@ for i in range(1,10):
     print (jump(i))            #  1,1,2,3,5,8,13,21,34
 
 
-##  跳台阶 ##
+##  跳台阶问题(1) ##
 '''
 青蛙一次可以跳1级，也可以跳2级  
 F(n) = F(n-1) + F(n-2)
@@ -34,5 +34,43 @@ def jumpfloor(n):
     return i2
 for i in range(1,7):
     print (jumpfloor(i))
+    
+
+##  跳台阶问题(2) ##
+'''
+该青蛙可以跳1,2,3,...,m-1,m级,台阶一共 n 级
+f(n) = f(n-1) + f(n-2) + f(n-3) + ... + f(n-(m-1)) + f(n-m)
+f(n-1) = f(n-2) + f(n-3) + f(n-4) + ... + f(n-m) + f(n-m-1)
+
+上下相减： f(n) = 2*f(n-1) - f(n-m-1)
+
+当 m = 2 时，1,2,3,5,8,13   和上面的一样
+当 m = n 时，注释掉前三行就可以了 
+
+'''
+
+def jumpnji(n):
+    m = 2
+    if n > m:
+        return 2*jumpnji(n-1) - jumpnji(n-1-m)
+    if n <= 1:
+        return 1
+    else:
+        return 2 * jumpnji(n-1)
+
+# 1,2,3,5,8,13
+for i in range(1,7):
+    print (jumpnji(i))
+
+
+
+
+
+
+
+
+
+
+
 
 
