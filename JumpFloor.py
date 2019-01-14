@@ -25,7 +25,7 @@ def jumpfloor(n):
         return 1
     i1, i2 = 1,1
     counter = 2
-    while(counter<=n):
+    while counter<=n:
         temp = i1+i2
         i1 = i2
         i2 = temp
